@@ -1,3 +1,45 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+    position: relative;
+    clip: rect(0px,165px,220px,0px);
+    /*clip: rect(0px,60px,200px,0px);*/
+}
+
+.wrapper-search {       
+    text-align: center;
+    margin: 10px;
+}
+
+.wrapper-results {       
+    margin: 20px 10% 10px;
+}
+
+.card {    
+    display: inline-block;
+    border-radius: 4px;    
+    width: 165px;
+    height: 320px;
+    overflow: hidden;
+    margin: 5px;
+    border: 1px blueviolet solid;  
+}
+
+.card-img {
+    max-height: 320px;    
+}
+
+.card-header {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.card-year {
+    font-size: 12px;
+    color: yellowgreen;
+    padding: 5px;
+}

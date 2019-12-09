@@ -24,31 +24,24 @@ function getMovieResult(str) {
             if (data.Search.length > 0) {
                 var text = "";          
                 for (i = 0; i < data.Search.length; i++) {          
-                                              
-                    text += "<div>" + data.Search[i].Title + "<div>";                
-
-                //text += data.Search[i].Title + " - " + data.Search[i].Year + " - " + data.Search[i].Poster; + "<br>";
-                
-                                  
-                //document.getElementById(i).innerHTML+=data.Search[i].Title + " - " + data.Search[i].Year + " - " + data.Search[i].Poster;     
+                                        
+                  text += "<div class='card'>";                
+                  text +=     "<div class='card-img'>";                
+                  text +=         "<img src='" + data.Search[i].Poster + "'>";                    
+                  text +=     "</div>";
+                  text +=     "<div class='card-header'>";                
+                  text +=         data.Search[i].Title;                    
+                  text +=     "</div>";
+                  text +=     "<div class='card-year'>";                
+                  text +=         "(" + data.Search[i].Year + ")";
+                  text +=     "</div>";
+                  text += "</div>";                
                 }                
-                app.innerHTML=text;          
+                // Print the movielist
+                app.innerHTML=text;                   
             }
-            
-
-            // Add links
-            //document.getElementById(i).innerHTML+='<a href="#" onclick="showCard(' + data.Search + "," + i + ')">' + data.Search[i].Title + " - " + data.Search[i].Year + '</a>';
-
-            //document.getElementById(i).innerHTML+=data.Search[i].Title + " - " + data.Search[i].Year + " - " + data.Search[i].Poster;     
-            //document.getElementById(i).innerHTML+=data.Search[i].Title + " - " + data.Search[i].Year + "<br>";     
-                
-            //document.getElementById(i).innerHTML='<a href="#" onclick="showCard(' + data.Search + "," + i + ')">' + data.Search[i].Title + " - " + data.Search[i].Year + '</a>';
-            //document.getElementById(i).innerHTML=data.Search[i].Title + " - " + data.Search[i].Year;     
-
-            
         }
-  
     }
-    xmlhttp.open("GET","http://www.omdbapi.com/?apikey=2c7cac91&r=json&s="+str,true);
+    xmlhttp.open("GET","https://www.omdbapi.com/?apikey=2c7cac91&r=json&s="+str,true);
     xmlhttp.send();
 }
