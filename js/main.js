@@ -42,6 +42,6 @@ function getMovieResult(str) {
             }
         }
     }
-    xmlhttp.open("GET","http://www.omdbapi.com/?apikey=2c7cac91&r=json&s="+str,true);
+    xmlhttp.open("GET","https://www.omdbapi.com/?apikey=2c7cac91&r=json&s="+str,true);
     xmlhttp.send();
 }
