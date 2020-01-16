@@ -23,11 +23,21 @@ function getMovieResult(str) {
             // Create the movielist
             if (data.Search.length > 0) {
                 var text = "";          
+                var poster_no = "<img src='images/no_image.svg'>";
+                
                 for (i = 0; i < data.Search.length; i++) {          
-                                        
+                  var poster_yes = "<img src=" + data.Search[i].Poster + ">";
+
                   text += "<div class='card'>";                
-                  text +=     "<div class='card-img'>";                
-                  text +=         "<img src='" + data.Search[i].Poster + "'>";                    
+                  text +=     "<div class='card-img'>";
+
+                  // Check if there is a poster available
+                  if (data.Search[i].Poster == "N/A") {
+                    text +=   poster_no;                      
+                  } else {
+                    text +=   poster_yes;
+                  }                  
+                  
                   text +=     "</div>";
                   text +=     "<div class='card-header'>";                
                   text +=         data.Search[i].Title;                    
