@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #000;
 }
 
 img {
@@ -8,6 +9,10 @@ img {
     position: relative;
     clip: rect(0px,165px,220px,0px);
     /*clip: rect(0px,60px,200px,0px);*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #C7493A;
 }
 
 .wrapper-search {       
@@ -25,8 +30,9 @@ img {
     width: 165px;
     height: 320px;
     overflow: hidden;
-    margin: 5px;
-    border: 1px blueviolet solid;  
+    margin: 5px;    
+    background-color: #fff;
+    color: #000;
 }
 
 .card-img {
