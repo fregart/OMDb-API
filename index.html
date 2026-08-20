@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,21 @@
 </head>
 <body>
 
-    <div id="root">
-        
-        <div class="wrapper-search">
-            <form>
-                <input type="text" size="30" onkeyup="getMovieResult(this.value)" placeholder="Search here...">                        
-            </form>        
-        </div>
+   <div class="wrapper-search">
 
-        <div class="wrapper-results">
-            <div id="movielist">
+    <form>
 
-            </div>
-        </div>
-        
-    </div>
+        <input
+            type="text"
+            placeholder="Sök efter en film..."
+            onkeyup="getMovieResult(this.value)"
+        >
+
+    </form>
+
+</div>
+
+<div id="movielist" class="wrapper-results"></div>
 
     <script src="js/main.js"></script>
 </body>
